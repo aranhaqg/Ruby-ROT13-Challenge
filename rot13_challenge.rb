@@ -1,7 +1,5 @@
-
-
-
-
+# Returns the 13th char 
+# Ex:  rot13_char(A) => returns N
 def rot13_char(char)
   c = char.ord
   
@@ -28,7 +26,9 @@ def rot13_char(char)
   return new_char_code.chr
 end
 
-
+# Receive an array of messages and returns an array of decoded messages
+# Ex: rot13(["Why did the chicken cross the road?","Gb trg gb gur bgure fvqr!"] 
+#     => returns ["Jul qvq gur puvpxra pebff gur ebnq?", "To get to the other side!"]
 def rot13(secret_messages)
     rot13_messages = []
     secret_messages.each do |message|
@@ -37,7 +37,3 @@ def rot13(secret_messages)
     return rot13_messages
 end
 
-secret_messages = ["Why did the chicken cross the road?","Gb trg gb gur bgure fvqr!", ]
-#puts "Why did the chicken cross the road?".chars.map{ |c| rot13_char(c)}.join("")
-#puts "Gb trg gb gur bgure fvqr!".chars.map{ |c| rot13_char(c)}.join("")
-puts rot13(secret_messages).flatten(1).map{ |c| puts c}
